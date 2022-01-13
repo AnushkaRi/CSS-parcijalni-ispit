@@ -1,0 +1,101 @@
+@import "./scss/base/colors";
+@import "./scss/base/reset";
+@import "./scss/abstracts/mixin";
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,500;1,500&display=swap');
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-size: 1rem;
+  font-family: 'Rubik', sans-serif;
+  line-height: 1;
+  background: url(./blur-clean.jpg);
+  background-size: cover;
+}
+
+.wrapper {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.h1 {
+  font-size: 10rem;
+}
+
+.css-content {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height:100vh;
+  gap: 100px;
+}
+
+.css-content > div {
+  position: relative;
+  display: inline-block;
+  color: $color-white;
+  padding: 80px 160px;
+  @include border-weight ($size);
+}
+
+.one {
+  background-color: $color-grey;
+}
+
+.two {
+  background-color: $color-darkred;
+}
+
+.three {
+  background-color: $color-dijon;
+}
+
+.ascend  {
+  position: relative;
+  display: inline-block;
+  opacity: 0;
+  animation: ascend 1.5s linear 0s forwards;
+}
+
+@keyframes ascend {
+  from { 
+    transform: translateY(-400px); 
+    opacity: 0; 
+  }
+  to { 
+    transform: translateY(0); 
+    opacity: 1; 
+  }
+  }
+
+  .ascend.one {
+    animation-delay: 0s;
+  }
+  .ascend.two {
+    animation-delay: 1.5s;
+  }
+  .ascend.three {
+    animation-delay: 3s;
+  }
+
+
+@media screen and (max-width: 1530px) {
+  .css-content{
+    flex-direction: column;
+    align-items: center;
+  }
+  .one, .two, .three {
+    font-size: 5rem;   
+  }
+  .css-content {
+    gap: 10px;
+  }
+}

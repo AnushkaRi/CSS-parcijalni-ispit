@@ -1,0 +1,3 @@
+@mixin border-weight ($size: 5px) {
+border: $color-white $size solid;
+}
