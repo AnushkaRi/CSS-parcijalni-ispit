@@ -91,11 +91,11 @@ body {
   .css-content{
     flex-direction: column;
     align-items: center;
-  }
-  .one, .two, .three {
-    font-size: 5rem;   
-  }
-  .css-content {
     gap: 10px;
+  }
+  .one, 
+  .two,
+  .three {
+    font-size: 5rem;
   }
 }
