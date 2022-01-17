@@ -13,7 +13,9 @@ body {
   font-family: 'Rubik', sans-serif;
   line-height: 1;
   background: url(./blur-clean.jpg);
+  background-attachment: fixed;
   background-size: cover;
+  background-position: 50% 50%; 
 }
 
 .wrapper {
